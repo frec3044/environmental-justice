@@ -2,7 +2,7 @@
 title: "The ecological and evolutionary consequences of systemic racism"
 author: "Millie Chapman (GSI)"
 output: 
-  github_document:
+  html_document:
     df_print: tibble
 ---
 
@@ -10,21 +10,22 @@ output:
 knitr::opts_chunk$set(messages = FALSE, cache = FALSE)
 
 # remotes::install_deps()
-library(tmap)      #interactive maps, raster + vector layers
-library(terra)       # Successor to the raster library
-library(tidyverse)   # our old friend
-library(sf)          # to work with simple features (vector) data
+library(rstac)
+library(gdalcubes)
+library(stars)
+library(tmap)
+library(dplyr)
+library(lubridate)
+gdalcubes::gdalcubes_options(parallel = TRUE)
 ```
 
 ## Learning objectives
 
 This module provides an introduction to the fundamentals of working with spatial vector and raster data in R while empirically exploring why systematic and structural racism is interwined with urban ecological processes. This module uses the Simple Features Access standard (ISO 19125) and tidyverse-style workflow using the sf package and emerging ecosystem of r-spatial tools.
 
-From wikipedia: Simple Features (officially Simple Feature Access) is a set of standards that specify a common storage and access model of geographic features made of mostly two-dimensional geometries (point, line, polygon, multi-point, multi-line, etc.) used by geographic databases and geographic information systems. It is formalized by both the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO).
-
 # Exercise 
 
-In August 2020, [Christopher Schell](http://directory.tacoma.uw.edu/employee/cjschell) and collegues published a review in *Science* on ['The ecological and evolutionary consequences of systemic racism in urban environments'](https://science.sciencemag.org/content/early/2020/08/12/science.aay4497) (DOI: 10.1126/science.aay4497), showing how systematic racism and classism  has significant impacts on ecological and evolutionary processes within urban environments. Here we explore a subset of the data used to support these findings in this review and the broader literature.
+In August 2020, [Christopher Schell](https://ourenvironment.berkeley.edu/users/1757114) and collegues published a review in *Science* on ['The ecological and evolutionary consequences of systemic racism in urban environments'](https://science.sciencemag.org/content/early/2020/08/12/science.aay4497) (DOI: 10.1126/science.aay4497), showing how systematic racism and classism  has significant impacts on ecological and evolutionary processes within urban environments. Here we explore a subset of the data used to support these findings in this review and the broader literature.
 
 The [press release](https://www.washington.edu/news/2020/08/13/systemic-racism-has-consequences-for-all-life-in-cities/) on the paper is worth a read:
 

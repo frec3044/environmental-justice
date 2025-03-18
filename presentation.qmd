@@ -22,3 +22,23 @@ When you click the **Render** button a presentation will be generated that inclu
 ```{r}
 1 + 1
 ```
+
+-   What is a COG A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization that enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​HTTP GET range requests to ask for just the parts of a file they need. (https://cogeo.org)
+
+-   What is a GeoTIFF
+
+-   GeoTIFF is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file (https://en.wikipedia.org/wiki/GeoTIFF)
+
+Tag Image File Format\[1\] or Tagged Image File Format,\[2\] commonly known by the abbreviations TIFF or TIF, is an image file format for storing raster graphics images, popular among graphic artists, the publishing industry,\[3\] and photographers. (https://en.wikipedia.org/wiki/TIFF)
+
+https://datacarpentry.github.io/r-raster-vector-geospatial/01-raster-structure.html
+
+tmap package
+
+STAC
+
+Data cube
+
+SF object vs stars object. Why called st rather than sf?
+
+stars: Spatiotemporal Arrays: Raster and Vector Datacubes. https://r-spatial.github.io/stars/
