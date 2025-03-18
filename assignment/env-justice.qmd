@@ -1,6 +1,6 @@
 ---
 title: "The ecological and evolutionary consequences of redlining"
-author: "Quinn Thomas"
+author: "ADD YOUR NAME"
 format: 
   html:
     embed-resources: true
@@ -195,3 +195,12 @@ Use a plot to answer the question: Does the relative difference between the high
 
 
 ```
+
+## Citation
+
+This tutorial is an extension of the tutorial created by Carl Boettiger and Millie Chapman at the University of California - Berkeley. <https://boettiger-lab.github.io/nasa-topst-env-justice/tutorials/R/1-intro-R.htm> and <https://github.com/espm-157/spatial-template>
+
+# Attribution
+
+Include citation of any AI-generated assistance or discussion with classmates (per policy in syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response.  Proper documentation of discussion with classmates include listing their names and the components discussed.  
+
