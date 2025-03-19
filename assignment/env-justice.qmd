@@ -18,11 +18,11 @@ gdalcubes::gdalcubes_options(parallel = TRUE)
 
 ## Learning objectives
 
-This module provides an introduction to the fundamentals of working with spatial vector and raster data in R while empirically exploring why systematic and structural racism is interwined with urban ecological processes. This module uses the Simple Features Access standard (ISO 19125) and tidyverse-style workflow using the sf package and emerging ecosystem of r-spatial tools.
+This module provides an introduction to the fundamentals of working with spatial vector and raster data in R while empirically exploring why systematic and structural racism is intertwined with urban ecological processes. It uses the Simple Features Access standard (ISO 19125) and a tidyverse-style workflow using the sf package and an emerging ecosystem of r-spatial tools.
 
 ## Background
 
-In August 2020, [Christopher Schell](https://ourenvironment.berkeley.edu/users/1757114) and collegues published a review in *Science* on ['The ecological and evolutionary consequences of systemic racism in urban environments'](https://www.science.org/doi/10.1126/science.aay4497) (DOI: 10.1126/science.aay4497), showing how systematic racism and classism has significant impacts on ecological and evolutionary processes within urban environments. Here we explore a subset of the data used to support these findings in this review and the broader literature.
+In August 2020, [Christopher Schell](https://ourenvironment.berkeley.edu/users/1757114) and colleagues published a review in *Science* on ['The ecological and evolutionary consequences of systemic racism in urban environments'](https://www.science.org/doi/10.1126/science.aay4497) (DOI: 10.1126/science.aay4497), showing how systematic racism and classism has significant impacts on ecological and evolutionary processes within urban environments. Here we explore a subset of the data used to support these findings in this review and the broader literature.
 
 The [press release](https://www.washington.edu/news/2020/08/13/systemic-racism-has-consequences-for-all-life-in-cities/) on the paper is worth a read:
 
@@ -38,9 +38,9 @@ We are going to explore one metric for how structural racism and classism underp
 
 ![Fig. 1.](figures/fig2.png)
 
-We are going to create map like these, and plot the distributions and mean vegetation patterns across cities to explore the structural inequality and racism that Schell et al highlight in their paper.
+We are going to create maps like these and plot the distributions and mean vegetation patterns across cities to explore the structural inequality and racism that Schell et al. highlight in their paper.
 
-To do this we are going to use the following spatial data:
+To do this, we are going to use the following spatial data:
 
 #### Mapping Inequality: (vector data)
 
@@ -50,13 +50,13 @@ Please take the time to read the introduction to this dataset [here](https://dsl
 
 #### Normalized Difference Vegetation Index (NDVI) (raster data)
 
-NDVI is used as proxy measure of vegetation health, cover and phenology (life cycle stage) over large areas. It is calculated using multiple bands from satellite images.
+NDVI is used as a proxy measure of vegetation health, cover, and phenology (life cycle stage) over large areas. It is calculated using multiple bands from satellite images.
 
 ## Warm-up questions
 
 **Question 1:**
 
-Using the `env-justice-tutorial.qmd` as the template, create a map which shows current mean NDVI within each grade class polygon in Richmond, VA.
+Using the `env-justice-tutorial.qmd` as the template, create a map that shows the current mean NDVI within each grade class polygon in Richmond, VA.
 
 **Answer 1:**
 
@@ -77,7 +77,7 @@ Create a table that displays the mean NDVI for the different grade classificatio
 
 ## Examining how the influence of redlining varies across city environmental or demographic characteristics
 
-In this section, you are going to examine how the relative difference between the highest grade and lowest grade differ between cities. You will then explore how that difference is related to environmental or demographic differences among the cities.
+In this section, you are going to examine how the relative difference between the highest grade and lowest grade differs between cities. You will then explore how that difference is related to environmental or demographic differences among the cities.
 
 **Question 3:**
 
@@ -96,7 +96,7 @@ Pick **five** cities that span a range of environmental or demographic character
 
 Select one variable in the data set from Question 3 that 1) interests you and 2) has a large enough range where you see differences across your five selected cities. 
 
-List your five cities, variable, and range of variable across your five cities.
+List your five cities, the focal variable, and the range of your variable across your five cities.
 
 **Answer 4:**
 
@@ -169,7 +169,7 @@ Extract the mean NDVI for the different grade classes for each of your five sele
 
 **Question 8:**
 
-Plot the values for the different classes for the five cities on the same graph (x axis is class, y axis is mean NDVI, color is city).
+Plot the values for the different classes for the five cities on the same graph (x-axis is class, y-axis is mean NDVI, color is city).
 
 **Answer 8:**
 
@@ -180,7 +180,7 @@ Plot the values for the different classes for the five cities on the same graph 
 
 **Question 9:**
 
-Calculate the relative difference between the lowest and highest class for each city.  Print your results out as a table to the HTML.
+Calculate the relative difference between the lowest and highest class for each city.  Print your results as a table in HTML.
 
 **Answer 9:**
 
@@ -206,5 +206,5 @@ This tutorial is an extension of the tutorial created by Carl Boettiger and Mill
 
 ## Attribution
 
-Include citation of any AI-generated assistance or discussion with classmates (per policy in syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response.  Proper documentation of discussion with classmates include listing their names and the components discussed.  
+Include citations of any AI-generated assistance or discussion with classmates (per policy in the syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response.  Proper documentation of discussion with classmates includes listing their names and the components discussed.  
 
