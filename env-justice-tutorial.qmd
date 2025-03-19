@@ -21,9 +21,9 @@ gdalcubes::gdalcubes_options(parallel = TRUE)
 
 # Data discovery
 
-The first step in many workflows involves discovering individual spatial data files covering the space, time, and variables of interest. Here we use a STAC Catalog API to recover a list of candidate data. We dig deeper into how this works and what it returns in later recipes. This example searches for images in a lon-lat bounding box from a collection of Cloud-Optimized-GeoTIFF (COG) images taken by Sentinel2 satellite mission. This function will not download any imagery, it merely gives us a list of metadata about available images, including the access URLs.
+The first step in many workflows involves discovering individual spatial data files covering the space, time, and variables of interest. Here we use a STAC Catalog API to recover a list of candidate data. We dig deeper into how this works and what it returns in later recipes. This example searches for images in a lon-lat bounding box from a collection of Cloud-Optimized-GeoTIFF (COG) images taken by the Sentinel2 satellite mission. This function will not download any imagery, it merely gives us a list of metadata about available images, including the access URLs.
 
-A COG is a regular GeoTIFF file that is intended to be hosted on an HTTP file server. Its internal organization enables more efficient workflows in the cloud.
+A COG is a regular GeoTIFF file intended to be hosted on an HTTP file server. Its internal organization enables more efficient workflows in the cloud.
 
 Sentinel-2 is an Earth observation mission from the Copernicus Programme that acquires optical imagery at high spatial resolution (10 m to 60 m) over land and coastal waters.  It collects data in bands, which are different wavelengths of reflected light from the Earth's surface and atmosphere.  Different bands can be used to study different aspects of the environment and can be used to calculate a range of [indexes](https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel/sentinel-2/#remote-sensing-indices) that are known to represent a key process.    
 
@@ -47,7 +47,7 @@ Explore the STAC catalog at <https://stacindex.org/catalogs/earth-search#> to le
 
 We are focusing on the collection within the catalog that includes Sentinel-2 data (sentinel-2-l2a).  
 
-The search includes the box, dates, and a filter for clouds.  The post request sends the search query to the server where the catalog is hosted.  It returns an object that includes the list of images that match our criteria.  
+The search includes the box, dates, and a filter for clouds.  The post request sends the search query to the catalog's server. It returns an object that includes a list of images that match our criteria.  
 
 ```{r}
 items <- stac("https://earth-search.aws.element84.com/v1/") |>
@@ -91,7 +91,7 @@ cube <- cube_view(srs ="EPSG:4326",
                   resampling = "average")
 ```
 
-You likely had warnings associated with making sure the cube has regular-sized boxes and time chunks. This is a good feature because it helps you get the right size cube and will always widen the cube to include what you asked for.
+You likely received warnings about making sure the cube has regular-sized boxes and time chunks. This feature is good because it helps you get the right size cube and will always widen the cube to include what you asked for.
 
 The function `image_mask` creates an image mask based on values in a band.  In our data cube, only pixels in the image that are not in this mask are used.
 
@@ -109,7 +109,7 @@ data <-  raster_cube(image_collection = col,
                      mask = mask)
 ```
 
-We can do arbitrary calculations on this data as well. Here we calculate NDVI, a widely used measure of greenness that can be used to determine tree cover. (Note that the R example uses lazy evaluation, and can thus perform these calculations while streaming).  
+We can also do arbitrary calculations on this data. Here, we calculate NDVI, a widely used measure of greenness that can be used to determine tree cover. (Note that the R example uses lazy evaluation and can thus perform these calculations while streaming.)  
 
 The function `select_bands` selects the defined bands.  In our case, the band selected also occurred at the call to `stac_image_collection` above, so this selection only removes the `scl` band.
 
@@ -128,9 +128,9 @@ Now, convert the NDVI object to a "stars" object so that it can more easily be v
 ndvi_stars <- st_as_stars(ndvi)
 ```
 
-Do not worry if you get the following warning: `Warning: GDAL Message 1: The dataset has several variables that could be identified as vector fields, but not all share the same primary dimension. Consequently they will be ignored.`
+Do not worry if you get the following warning: `Warning: GDAL Message 1: The dataset has several variables that could be identified as vector fields, but not all share the same primary dimension. Consequently, they will be ignored.`
 
-Now, you can plot the result. The long rectangle of Golden Gate Park is clearly visible in the Northwest.
+You can now plot the result. In the northwest, the long rectangle of Golden Gate Park is clearly visible.
 
 First, define the scales for the image using the `viridisLite::mako` palate. 
 
@@ -147,7 +147,7 @@ tm_shape(shp = ndvi_stars) +
 
 # From NDVI to environmental justice
 
-We examine the present-day impact of historic “red-lining” of US cities during the Great Depression using data from the Mapping Inequality project. All though this racist practice was banned by federal law under the Fair Housing Act of 1968, the systemic scars of that practice are still so deeply etched on our landscape that they remain visible from space – “red-lined” areas (graded “D” under the racist HOLC scheme) show systematically lower greenness than predominately-white neighborhoods (Grade “A”). Trees provide many benefits, from mitigating urban heat to biodiversity, real-estate value, to health.
+We examine the present-day impact of historic “redlining” of US cities during the Great Depression using data from the Mapping Inequality project. All though this racist practice was banned by federal law under the Fair Housing Act of 1968, the systemic scars of that practice are still so deeply etched on our landscape that they remain visible from space – “red-lined” areas (graded “D” under the racist HOLC scheme) show systematically lower greenness than predominately-white neighborhoods (Grade “A”). Trees provide many benefits, from mitigating urban heat to biodiversity, real-estate value, to health.
 
 Information about HOLC Schema from Wikipedia:
 
@@ -321,7 +321,3 @@ sf |>
 # Citation
 
 This tutorial is an extension of the tutorial created by Carl Boettiger and Millie Chapman at the University of California - Berkeley. <https://boettiger-lab.github.io/nasa-topst-env-justice/tutorials/R/1-intro-R.html>
-
-# Attribution
-
-Include citations of any AI-generated assistance or discussion with classmates (per policy in the syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response. Proper documentation of discussion with classmates includes listing their names and the components discussed.
