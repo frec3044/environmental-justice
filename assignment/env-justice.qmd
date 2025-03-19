@@ -92,7 +92,11 @@ Read in the characteristics of the different cities in the dataset. The characte
 
 **Question 4:**
 
-Pick **five** cities that span a range of environmental or demographic characteristics. Select one variable in the data set from Question 3 that 1) interests you and 2) has a large enough range where you see differences across your five selected cities.
+Pick **five** cities that span a range of environmental or demographic characteristics. 
+
+Select one variable in the data set from Question 3 that 1) interests you and 2) has a large enough range where you see differences across your five selected cities. 
+
+List your five cities, variable, and range of variable across your five cities.
 
 **Answer 4:**
 
@@ -176,7 +180,7 @@ Plot the values for the different classes for the five cities on the same graph 
 
 **Question 9:**
 
-Calculate the relative difference between the lowest and highest class for each city.
+Calculate the relative difference between the lowest and highest class for each city.  Print your results out as a table to the HTML.
 
 **Answer 9:**
 
@@ -200,7 +204,7 @@ Use a plot to answer the question: Does the relative difference between the high
 
 This tutorial is an extension of the tutorial created by Carl Boettiger and Millie Chapman at the University of California - Berkeley. <https://boettiger-lab.github.io/nasa-topst-env-justice/tutorials/R/1-intro-R.htm> and <https://github.com/espm-157/spatial-template>
 
-# Attribution
+## Attribution
 
 Include citation of any AI-generated assistance or discussion with classmates (per policy in syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response.  Proper documentation of discussion with classmates include listing their names and the components discussed.  
 

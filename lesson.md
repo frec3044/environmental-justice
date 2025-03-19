@@ -1,54 +1,61 @@
-
-# Climate change module
+# Environmental Justice Module
 
 ## Overview
 
-What is the evidence for a changing climate? In this unit, we will examine some of the most important indicators of global climate change, including CO2 concentration, global mean temperature, sea level rise, land ice sheet melt, and arctic sea ice cover. We will wrangle a wide range of tabular data file formats used by NOAA and other agencies and introduce the fundamentals of data visualization with `ggplot2` and data processing with basic functions from the `readr`, `tidyr`, and `dplyr` packages as we seek to replicate the principle results of climate change over the last decades and also the past thousands of years. In particular, in this module, we will recreate the now-famous "Hockey-stick" curve combining present and historical CO2 records from [Petit et al. (1999, *Nature*)](https://doi.org/10.1038/20859 "Climate and atmospheric history of the past 420,000 years from the Vostok ice core, Antarctica").
+What is the present-day impact of historic “red-lining” of US cities during the Great Depression on ecological processes?
 
-- author: Quinn Thomas (adapted from Carl Boettiger (@cboettig))
+- author: Quinn Thomas (adapted from Carl Boettiger and Millie Chapman)
 - contact: <rqthomas@vt.edu>
-- date: 2022-01-05
+- date: 2025-03-20
 - license: MIT, CC-BY
-- copyright: Quinn Thomas & Carl Boettiger
+- copyright: Quinn Thomas
 
 ## Feedback
 
-- <https://github.com/frec3044/climate-change/issues>
+- <https://github.com/frec3044/environmental-justice/issues>
 
 ## Questions
 
- - What is the evidence for a changing climate?
- - How do find & interpret data sources behind leading climate change indicators?
- - How do we read and plot this data in a scriptable & reproducible manner?
- - How do we communicate technical analysis in notebook formats that combine code, text, and visuals?
+ - How does vegetation productivity in cities vary by historical historic “red-lining” grades?
+ - How does the influence of red-lining on productivity vary across cities with different environmental or demographic characteristics?
 
 ## Objectives
 
-  - Become familiar with a wide range of tabular data formats
-  - Become familiar with reading data into R and generating plots in `ggplot`
+  - Describe concepts behind cloud-based geospatial file formats
+  - Demonstrate the generation and processing of raster cubes
+  - Generating maps with raster and polygon data
   - Demonstrate ability to use RStudio and GitHub workflows to demonstrate reproducible output.
   - Demonstrate ability to communicate clearly in code, written text, and visual formats.
+  
 ## Requirements:
 
   - `tidyverse`
+  - `rstac`
+  - `gdalcubes`
+  - `stars`
+  - `tmap`
   - `R`
   - RStudio
   - Git & GitHub.
 
 ## Instructions
 
-  - Open the notebook `assignment/climate-change.qmd` in RStudio
-  - Work through the exercises described in the notebook.
-  - `knit` + commit output files to GitHub
+  - Read and complete the tutorial in `env-justice-tutorial.qmd`
+  - Work the assignment in `assignment/env-justice.qmd`
+  - `render` + commit output files to GitHub
 
 ## Context
 
+This module is part of a junior-level course in Environmental Data Science at Virginia Tech.  The students in the course have a prior course in R programming.  The module is placed towards the end of the 16-week semester.
 
 ## Timeframe
 
-  - This module is usually delivered over 1 week (2 75-minute class sessions).
-
+This module is usually delivered over 2 weeks (4 75-minute class sessions).
 
 ## Background Reading, Video & Exercises
 
-The background reading is embedded in the assignment Quarto document as links to the relevant sections of [R for Data Science book (2nd edition)](https://r4ds.hadley.nz) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+The background reading is embedded in the assignment Quarto document.
+
+## Attribution
+
+This tutorial is an extension of the tutorial created by Carl Boettiger and Millie Chapman at the University of California - Berkeley. <https://boettiger-lab.github.io/nasa-topst-env-justice/tutorials/R/1-intro-R.htm> and <https://github.com/espm-157/spatial-template>
