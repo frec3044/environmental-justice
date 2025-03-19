@@ -48,7 +48,7 @@ What is the present-day impact of historic "redlining" of US cities during the G
 
 Mapping Relining is a project at the University of Richmond that provides maps of HOLC grades in cities across the U.S.
 
-Mapping are available as polygons for use in geospatial analysis
+Maps are available as polygons for use in geospatial analysis
 
 ::: aside
 <https://dsl.richmond.edu/panorama/redlining>
@@ -56,7 +56,7 @@ Mapping are available as polygons for use in geospatial analysis
 
 ## Context: Canopy cover {.smaller}
 
--   Tree and vegetation influence the local temperatures
+-   Trees and vegetation influence the local temperatures
 -   Generally: more trees/canopy, cooler local temperatures
 
 ![](img/bonan-forest-climate.png){fig-alt="diagram of influence of forests on temperature" width="800" fig-align="center"}
@@ -91,9 +91,9 @@ https://en.wikipedia.org/wiki/Sentinel-2
 
 ## Data: Satellites
 
--   Satellites record reflected light in differ regions of the light spectrum (wavelengths)
+-   Satellites record reflected light in different regions of the light spectrum (wavelengths)
 
--   Data = a value of intensity for average over wavelength "band"
+-   Data = a value of average intensity over a window of wavelengths ("band")
 
 -   Bands are chosen because they measure different aspects of the environment.
 
@@ -143,9 +143,9 @@ Full remote sensing data sets are huge! (many bands, locations, times)
 
 ## Data: COGs and GeoTIFFs
 
--   A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization that enables more efficient workflows on the cloud.
--   Leverages the ability of clients requesting just the parts of a file they need. (https://cogeo.org)
--   GeoTIFF is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file (https://en.wikipedia.org/wiki/GeoTIFF)
+- A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file aimed at being hosted on an HTTP file server with an internal organization that enables more efficient workflows on the cloud.
+-   Leverages the ability of clients to request just the parts of a file they need. (https://cogeo.org)
+-   GeoTIFF is a public domain metadata standard that allows georeferencing information to be embedded within a TIFF file (https://en.wikipedia.org/wiki/GeoTIFF)
 
 ## Environmental Justice and Ecology
 
@@ -168,7 +168,7 @@ Full remote sensing data sets are huge! (many bands, locations, times)
 
 ## Data Science Skills
 
--   Cloud-access of remote sensing data
+-   Cloud access of remote sensing data
 -   Raster Cubes
 -   Linking rasters with polygons
 -   Calculating spatial statistics within polygons.
