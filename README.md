@@ -1,16 +1,20 @@
-This repository is a template for the environmental justice module. This is the fourth module of FREC 3044 Environmental Data Science, intended to use tidyverse skills to perform basic modeling in R.
+This repository is a template for the environmental justice module. 
 
 ## assignment
 
-All work for this assignment is in the `assignment` directory.  Code is contained in the `env-justice.qmd` notebook, and final rendered output files (`climate-change.md` and associated files) are in the `assignment` directory as well. The general rubric you will be graded on is found in the `rubric.md` file. 
+All work for this assignment is in the `assignment` directory.  Code is contained in the `env-justice.qmd` notebook. The general rubric you will be graded on is found in the `rubric.md` file. 
 
 ## Special files
 
-Additionally this repository, and all student repositories, includes most of the special files found here:
+Additionally, this repository, and all student repositories, includes most of the special files found here:
+
+- `assignment/data/city_date.csv` is data used in the assignment with demography and environmental data for different cities across the U.S.
+- `env-justice-tutorial.qmd` is a tutorial guiding students through the skills used in the assignment.  It is an extension of <https://boettiger-lab.github.io/nasa-topst-env-justice/tutorials/R/1-intro-R.html>
 
 ### Common files
 
-- `README.md` this file, a general overview of the repository in markdown format.  
+- `README.md` this file, a general overview of the repository in markdown format.
+- `presentation.html` and `presentation.qmd` are the introduction presentation for the module
 - `lesson.md` a description of the assignment.
 - `rubric.md` the rubric for how the module will be accessed.
 - `.gitignore` Optional file, ignore common file types we don't want to accidentally commit to GitHub. Most projects should use this. 
