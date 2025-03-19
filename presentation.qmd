@@ -1,44 +1,174 @@
 ---
 title: "Environmental Justice"
-format: revealjs
+format: 
+  revealjs:
+    embed-resources: true
 editor: visual
 ---
 
-## Quarto
+## Environmental Legacy of redlining
+\
+\
+\ 
+What is the present-day impact of historic "redlining" of US cities during the Great Depression on ecological processes?
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+## Environmental Justice and Ecology
 
-## Bullets
+::::: columns
+::: {.column width="70%"}
+![](img/paper.png){fig-alt="screenshot of Schell et al paper"}
+:::
 
-When you click the **Render** button a document will be generated that includes:
+::: {.column width="30%"}
+![](img/schell.png){fig-alt="picture of Dr. Christopher Schell"} Dr. Christopher Schell
+:::
+:::::
 
--   Content authored with markdown
--   Output from executable code
+::: aside
+<https://doi.org/10.1126/science.aay4497> <https://ourenvironment.berkeley.edu/users/1757114>
+:::
 
-## Code
+## Environmental Justice and Ecology
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+![](img/multi-level.png){fig-alt="Figure 1a from Schell et al." fig-align="center" width="495"}
 
-```{r}
-1 + 1
-```
+::: footnote
+<https://doi.org/10.1126/science.aay4497>
+:::
 
--   What is a COG A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization that enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​HTTP GET range requests to ask for just the parts of a file they need. (https://cogeo.org)
+## Context: Redlining {.smaller}
 
--   What is a GeoTIFF
+-   The Home Owners' Loan Corporation (HOLC) was a government-sponsored corporation created as part of the New Deal
+-   The HOLC created a housing appraisal system of color-coded maps that categorized the riskiness of lending to households in different neighborhoods
+-   Lower grades = less opportunity for loans but lower grades also = minority communities
+-   Red-lining: A discriminatory practice in which financial services are withheld from neighborhoods that have significant numbers of racial and ethnic minorities
+-   It was outlawed in 1968 following the passage of the civil rights bill.
 
+## Data: Mapping Relining
+
+Mapping Relining is a project at the University of Richmond that provides maps of HOLC grades in cities across the U.S.
+
+Mapping are available as polygons for use in geospatial analysis
+
+::: aside
+<https://dsl.richmond.edu/panorama/redlining>
+:::
+
+## Context: Canopy cover {.smaller}
+
+-   Tree and vegetation influence the local temperatures
+-   Generally: more trees/canopy, cooler local temperatures
+
+![](img/bonan-forest-climate.png){fig-alt="diagram of influence of forests on temperature" width="800" fig-align="center"}
+
+::: aside
+<https://doi.org/10.1126/science.1155121>
+:::
+
+## Data: satellites
+
+Vegetation indices from satellites
+
+::::: columns
+::: {.column width="50%"}
+Sentinel 2
+
+-   10 m, 20 m and 60 m spatial resolution
+
+-   Since 2015
+
+-   Maps every 10 days
+:::
+
+::: {.column width="50%"}
+![](img/Pi7_Image_s2.jpg){fig-alt="image of satellite" fig-align="center"}
+:::
+:::::
+
+::: aside
+https://en.wikipedia.org/wiki/Sentinel-2
+:::
+
+## Data: Satellites
+
+-   Satellites record reflected light in differ regions of the light spectrum (wavelengths)
+
+-   Data = a value of intensity for average over wavelength "band"
+
+-   Bands are chosen because they measure different aspects of the environment.
+
+## Data: Satellites
+
+![](img/S2-2022_Auto16.jpeg){fig-alt="diagram of spectral bands measured by Sentinel 2"}
+
+::: aside
+<https://www.eoportal.org/satellite-missions/copernicus-sentinel-2>
+:::
+## Data: Indices
+
+::::: columns
+::: {.column width="50%"}
+-   Bands can be combined to get indices that measure ecological processes
+-   Normalized Difference Vegetation Index (NDVI) \~ photosynthesis (amount + health of vegetation)
+-   Higher NDVI = more canopy = cooler local temperatures
+:::
+
+::: {.column width="50%"}
+![](img/1429843234.png){fig-alt="diagram of NDVI calculation" fig-align="center"}
+:::
+:::::
+
+::: aside
+<https://ece.montana.edu/seniordesign/archive/SP15/OpticalWeedMapping/ndvi.html>
+:::
+
+## Data: Raster
+
+Band and NDVI across space are stored as rasters
+
+![](img/RasterOriginVsExtents_611x402.png){fig-alt="diagram of a raster" fig-align="center"}
+
+## Data: Data Cubes
+
+Rasters are combined over time to form data cubes
+
+![](img/cube1.png){fig-alt="diagram of a raster cube" fig-align="center" width="700"}
+
+## Data: COGs and GeoTIFFs
+
+\
+\
+\
+Full remote sensing data sets are huge! (many bands, locations, times)
+
+## Data: COGs and GeoTIFFs
+
+-   A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization that enables more efficient workflows on the cloud.
+-   Leverages the ability of clients requesting just the parts of a file they need. (https://cogeo.org)
 -   GeoTIFF is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file (https://en.wikipedia.org/wiki/GeoTIFF)
 
-Tag Image File Format\[1\] or Tagged Image File Format,\[2\] commonly known by the abbreviations TIFF or TIF, is an image file format for storing raster graphics images, popular among graphic artists, the publishing industry,\[3\] and photographers. (https://en.wikipedia.org/wiki/TIFF)
+## Environmental Justice and Ecology
 
-https://datacarpentry.github.io/r-raster-vector-geospatial/01-raster-structure.html
+![](img/baltimore.png){fig-alt="NDVI for different grades from Figure 2 in Schell et al." fig-align="center" width="1000"}
 
-tmap package
+::: aside
+<https://doi.org/10.1126/science.aay4497>
+:::
 
-STAC
+## Assignment
 
-Data cube
+-   Calculate, map, and analyze NDVI for different redlining grades within Richmond, VA
+-   Calculate and map NDVI for different redlining grades for five cities of your choice
+-   Evaluate how the relative influence of redlining varies across environmental or demographic gradients
 
-SF object vs stars object. Why called st rather than sf?
+## Assignment
 
-stars: Spatiotemporal Arrays: Raster and Vector Datacubes. https://r-spatial.github.io/stars/
+-   Review tutorial `env-justice-tutorial.qmd`
+-   Assignment is in `assignment/env-justice.qmd`
+
+## Data Science Skills
+
+-   Cloud-access of remote sensing data
+-   Raster Cubes
+-   Linking rasters with polygons
+-   Calculating spatial statistics within polygons.
