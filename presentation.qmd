@@ -7,10 +7,10 @@ editor: visual
 ---
 
 ## Environmental Legacy of redlining
+
 \
 \
-\ 
-What is the present-day impact of historic "redlining" of US cities during the Great Depression on ecological processes?
+  What is the present-day impact of historic "redlining" of US cities during the Great Depression on ecological processes?
 
 ## Environmental Justice and Ecology
 
@@ -46,9 +46,9 @@ What is the present-day impact of historic "redlining" of US cities during the G
 
 ## Data: Mapping Relining
 
-Mapping Relining is a project at the University of Richmond that provides maps of HOLC grades in cities across the U.S.
+-   Mapping Relining is a project at the University of Richmond that provides maps of HOLC grades in cities across the U.S.
 
-Maps are available as polygons for use in geospatial analysis
+-   Maps are available as polygons for use in geospatial analysis
 
 ::: aside
 <https://dsl.richmond.edu/panorama/redlining>
@@ -104,6 +104,7 @@ https://en.wikipedia.org/wiki/Sentinel-2
 ::: aside
 <https://www.eoportal.org/satellite-missions/copernicus-sentinel-2>
 :::
+
 ## Data: Indices
 
 ::::: columns
@@ -143,7 +144,7 @@ Full remote sensing data sets are huge! (many bands, locations, times)
 
 ## Data: COGs and GeoTIFFs
 
-- A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file aimed at being hosted on an HTTP file server with an internal organization that enables more efficient workflows on the cloud.
+-   A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file aimed at being hosted on an HTTP file server with an internal organization that enables more efficient workflows on the cloud.
 -   Leverages the ability of clients to request just the parts of a file they need. (https://cogeo.org)
 -   GeoTIFF is a public domain metadata standard that allows georeferencing information to be embedded within a TIFF file (https://en.wikipedia.org/wiki/GeoTIFF)
 
