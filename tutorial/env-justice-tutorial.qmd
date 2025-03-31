@@ -147,14 +147,14 @@ tm_shape(shp = ndvi_stars) +
 
 # From NDVI to environmental justice
 
-We examine the present-day impact of historic “redlining” of US cities during the Great Depression using data from the Mapping Inequality project. All though this racist practice was banned by federal law under the Fair Housing Act of 1968, the systemic scars of that practice are still so deeply etched on our landscape that they remain visible from space – “red-lined” areas (graded “D” under the racist HOLC scheme) show systematically lower greenness than predominately-white neighborhoods (Grade “A”). Trees provide many benefits, from mitigating urban heat to biodiversity, real-estate value, to health.
+We examine the present-day impact of historic “redlining” of US cities during the Great Depression using data from the Mapping Inequality project. All though this practice was banned by federal law under the Fair Housing Act of 1968, the scars of that practice remain visible from space through through variation in canopy greenness (proxy for trees cover and health). Trees provide many benefits, from mitigating urban heat to biodiversity, real-estate value, to health.
 
 Information about HOLC Schema from Wikipedia:
 
 - The Home Owners' Loan Corporation (HOLC) was a government-sponsored corporation created as part of the New Deal
 - The HOLC created a housing appraisal system of color-coded maps that categorized the riskiness of lending to households in different neighborhoods
 - Lower grades = less opportunity for loans but lower grades also = minority communities
-- Red-lining: A discriminatory practice in which financial services are withheld from neighborhoods that have significant numbers of racial and ethnic minorities
+- Red-lining: A practice in which financial services are withheld from neighborhoods with lower grades that were associated with relatively more racial and ethnic minorities
 - It was outlawed in 1968 following the passage of the civil rights bill. 
 
 ## Zonal statistics
