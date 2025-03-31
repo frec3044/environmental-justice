@@ -22,7 +22,7 @@ Question 2:
 
 Question 3:
 
--   Partial Credit: Correctly loaded data using tidyverse functions
+-   Full Credit: Correctly loaded data using tidyverse functions
 
 -   No Credit: Did not correctly load data.
 
@@ -44,7 +44,7 @@ Question 5:
 
 Question 6:
 
--   Full Credit: An Insightful description is provided that connects to the five figures in Question 5.
+-   Full Credit: An insightful description is provided that connects to the five figures in Question 5.
 
 -   Partial Credit: Description provide but is cursory
 
@@ -96,7 +96,7 @@ Quarto
 
 GitHub
 
--   Full Credit: assignment found on the course GitHub, multiple commits provided, and HTML committed
+-   Full Credit: Assignment found on the course GitHub, multiple commits provided, and HTML committed
 
 -   Partial Credit: Assignment found on course GitHub, but only a single commit was provided (no evidence that the student saved and committed progress) or missing HTML on GitHub.
 
