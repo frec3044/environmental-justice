@@ -164,7 +164,7 @@ Full remote sensing data sets are huge! (many bands, locations, times)
 
 ## Assignment
 
--   Review tutorial `env-justice-tutorial.qmd`
+-   Review tutorial `tutorial/env-justice-tutorial.qmd`
 -   Assignment is in `assignment/env-justice.qmd`
 
 ## Data Science Skills
